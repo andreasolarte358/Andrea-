@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus Derechos Valen — Abg. Andrea Solarte | Portal Jurídico de Derechos Humanos</title>
+  <meta name="description" content="Tus Derechos Valen: espacio de orientación legal, defensa y educación en Derechos Humanos liderado por la Abg. Andrea Solarte. Conoce y defiende tus garantías fundamentales.">
+
+  <!-- Estilos del Portal: Fondo Fucsia con Girasoles -->
+  <link rel="stylesheet" href="css/derechos.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN
+       ======================================================================== -->
+  <header class="dh-navbar-wrapper">
+    <div class="dh-container">
+      <nav class="dh-navbar" aria-label="Navegación Institucional">
+        
+        <!-- Logotipo con Girasol Radiante -->
+        <a href="index.html" class="dh-brand">
+          <svg class="sunflower-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pétalos exteriores dorados -->
+            <g fill="#FACC15" stroke="#EAB308" stroke-width="1.5">
+              <ellipse cx="50" cy="18" rx="6" ry="14"/>
+              <ellipse cx="50" cy="82" rx="6" ry="14"/>
+              <ellipse cx="18" cy="50" rx="14" ry="6"/>
+              <ellipse cx="82" cy="50" rx="14" ry="6"/>
+              <ellipse cx="27" cy="27" rx="7" ry="14" transform="rotate(-45 27 27)"/>
+              <ellipse cx="73" cy="73" rx="7" ry="14" transform="rotate(-45 73 73)"/>
+              <ellipse cx="73" cy="27" rx="7" ry="14" transform="rotate(45 73 27)"/>
+              <ellipse cx="27" cy="73" rx="7" ry="14" transform="rotate(45 27 73)"/>
+              <!-- Pétalos intermedios -->
+              <ellipse cx="34" cy="20" rx="5" ry="12" transform="rotate(-22.5 34 20)"/>
+              <ellipse cx="66" cy="20" rx="5" ry="12" transform="rotate(22.5 66 20)"/>
+              <ellipse cx="80" cy="34" rx="12" ry="5" transform="rotate(22.5 80 34)"/>
+              <ellipse cx="80" cy="66" rx="12" ry="5" transform="rotate(-22.5 80 66)"/>
+              <ellipse cx="66" cy="80" rx="5" ry="12" transform="rotate(-22.5 66 80)"/>
+              <ellipse cx="34" cy="80" rx="5" ry="12" transform="rotate(22.5 34 80)"/>
+              <ellipse cx="20" cy="66" rx="12" ry="5" transform="rotate(22.5 20 66)"/>
+              <ellipse cx="20" cy="34" rx="12" ry="5" transform="rotate(-22.5 20 34)"/>
+            </g>
+            <!-- Centro del Girasol con Balanza sutil -->
+            <circle cx="50" cy="50" r="17" fill="#78350F"/>
+            <circle cx="50" cy="50" r="14" fill="#451A03"/>
+            <!-- Detalle de semilla / Balanza -->
+            <path d="M50 42v16M45 46h10M43 51l2-5 2 5zm10 0l2-5 2 5z" stroke="#FDE047" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <div class="dh-brand-text">
+            <span class="dh-brand-title">Tus Derechos Valen</span>
+            <span class="dh-brand-subtitle">Abg. Andrea Solarte</span>
+          </div>
+        </a>
+
+        <!-- Enlaces -->
+        <ul class="dh-nav-links">
+          <li><a href="#inicio" class="dh-nav-link">Inicio</a></li>
+          <li><a href="#sobre-nosotros" class="dh-nav-link">Sobre Nosotros</a></li>
+          <li><a href="#valores" class="dh-nav-link">Nuestros Valores</a></li>
+          <li><a href="#articulos" class="dh-nav-link">Guías Ciudadanas</a></li>
+          <li><a href="#abogada" class="dh-nav-link">Abg. Andrea Solarte</a></li>
+        </ul>
+
+        <!-- Acciones -->
+        <div class="dh-nav-actions">
+          <button type="button" class="dh-btn dh-btn-sunflower" style="padding:0.65rem 1.35rem; font-size:0.85rem;" onclick="openSupportModal()">
+            <span>🌻 Consulta Legal</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       1. SECCIÓN PRINCIPAL (HERO)
+       ======================================================================== -->
+  <main>
+    <section class="dh-hero" id="inicio">
+      <div class="dh-container">
+        <div class="dh-hero-content">
+          
+          <!-- Badge con Girasol y Nombre de la Abogada -->
+          <div class="dh-badge-sunflower">
+            <span>🌻 Portal Jurídico & Defensa Ciudadana • Abg. Andrea Solarte</span>
+          </div>
+
+          <!-- Título Gancho -->
+          <h1 class="dh-hero-title">
+            «Cada vida tiene valor, cada derecho cuenta: construyamos juntos un mundo con dignidad y justicia.»
+          </h1>
+
+          <!-- Subtítulo de 2 Líneas -->
+          <p class="dh-hero-subtitle">
+            Defendemos los derechos humanos para que nadie quede en soledad, silencio o indefensión frente a la injusticia.<br>
+            Conoce tus garantías fundamentales, alza tu voz y sé parte activa de la transformación comunitaria.
+          </p>
+
+          <!-- Botones de Acción -->
+          <div class="dh-hero-buttons">
+            <a href="#articulos" class="dh-btn dh-btn-sunflower">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Conoce tus derechos ahora</span>
+            </a>
+
+            <button type="button" class="dh-btn dh-btn-white" onclick="openSupportModal()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Únete a la red de apoyo</span>
+            </button>
+          </div>
+
+          <!-- Franja de Confianza y Atención -->
+          <div class="dh-authority-strip">
+            <span>🌻 Dirección Jurídica: Abg. Andrea Solarte</span>
+            <span>•</span>
+            <span>⚖️ Acompañamiento Gratuito y Confidencial</span>
+            <span>•</span>
+            <span>🕊️ Tus Derechos Valen en Todo Lugar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. SECCIÓN «SOBRE NOSOTROS»: MISIÓN, VISIÓN Y VALORES
+         ====================================================================== -->
+    <section class="dh-section-py" id="sobre-nosotros">
+      <div class="dh-container">
+        <div style="text-align:center; max-width:720px; margin:0 auto 3.5rem auto;">
+          <div class="dh-badge-sunflower" style="background:rgba(255,255,255,0.2); border-color:#ffffff; color:#ffffff;">
+            🌻 Propósito, Misión & Visión
+          </div>
+          <h2 class="text-white">Sobre Nosotros</h2>
+          <p style="color:#fce7f3;">
+            En <strong>Tus Derechos Valen</strong>, bajo el liderazgo de la <strong>Abg. Andrea Solarte</strong>, promovemos una justicia accesible, cercana y solidaria para cada individuo.
+          </p>
+        </div>
+
+        <!-- Misión y Visión (Exactamente 3 líneas cada una) -->
+        <div class="dh-about-cards-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+          
+          <!-- Tarjeta de Misión -->
+          <article class="dh-card-mv mission">
+            <div class="dh-mv-icon-sunflower">
+              <span style="font-size:2rem;">🌻</span>
+            </div>
+            <h3 class="dh-card-title">Nuestra Misión</h3>
+            <div class="dh-mv-lines">
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Acompañamos a personas y comunidades en la protección y defensa activa de su dignidad humana frente a cualquier abuso.</span>
+              </div>
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Facilitamos educación accesible, asesoría legal cercana y herramientas prácticas para que toda persona reclame sus libertades fundamentales.</span>
+              </div>
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Promovemos espacios seguros de encuentro y diálogo donde el bienestar colectivo y la justicia sean una realidad cotidiana para todas las personas.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta de Visión -->
+          <article class="dh-card-mv vision">
+            <div class="dh-mv-icon-sunflower">
+              <span style="font-size:2rem;">☀️</span>
+            </div>
+            <h3 class="dh-card-title">Nuestra Visión</h3>
+            <div class="dh-mv-lines">
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Aspiramos a una sociedad equitativa y pacífica, donde el respeto a los derechos humanos sea la base de toda convivencia y decisión pública.</span>
+              </div>
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Trabajamos por un futuro sin violencia ni discriminación, donde las leyes protejan con la misma fuerza a todas las personas sin excepción.</span>
+              </div>
+              <div class="dh-mv-line">
+                <span class="dh-mv-sunflower-bullet">🌻</span>
+                <span>Soñamos con comunidades conscientes, solidarias y empoderadas, capaces de defender la vida y la libertad de generación en generación.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4 Valores Fundamentales -->
+        <div id="valores" style="margin-top: 5rem;">
+          <div style="text-align:center; max-width:680px; margin:0 auto 2.5rem auto;">
+            <div class="dh-badge-sunflower" style="background:rgba(255,255,255,0.2); border-color:#ffffff; color:#ffffff;">
+              🌻 Ética y Compromiso
+            </div>
+            <h2 class="text-white">Nuestros Cuatro Valores Fundamentales</h2>
+            <p style="color:#fce7f3;">Los principios que iluminan el ejercicio del derecho y la defensa ciudadana de la Abg. Andrea Solarte.</p>
+          </div>
+
+          <div class="dh-values-grid">
+            <!-- Valor 1: Justicia -->
+            <div class="dh-value-card">
+              <div class="dh-value-top">
+                <span class="dh-value-badge">Pilar 01</span>
+                <span style="font-size:1.3rem;">⚖️</span>
+              </div>
+              <h4 class="dh-value-title">Justicia</h4>
+              <p class="dh-value-desc">
+                Actuamos con firmeza para reparar daños, exigir verdad y asegurar que la ley proteja siempre a las personas más vulnerables.
+              </p>
+            </div>
+
+            <!-- Valor 2: Igualdad -->
+            <div class="dh-value-card">
+              <div class="dh-value-top">
+                <span class="dh-value-badge">Pilar 02</span>
+                <span style="font-size:1.3rem;">🤝</span>
+              </div>
+              <h4 class="dh-value-title">Igualdad</h4>
+              <p class="dh-value-desc">
+                Reconocemos el valor único e idéntico de cada ser humano, rechazando cualquier forma de discriminación o exclusión.
+              </p>
+            </div>
+
+            <!-- Valor 3: Transparencia -->
+            <div class="dh-value-card">
+              <div class="dh-value-top">
+                <span class="dh-value-badge">Pilar 03</span>
+                <span style="font-size:1.3rem;">🔍</span>
+              </div>
+              <h4 class="dh-value-title">Transparencia</h4>
+              <p class="dh-value-desc">
+                Gestionamos cada acción con honestidad total, rindiendo cuentas claras y abiertas a la comunidad para construir confianza duradera.
+              </p>
+            </div>
+
+            <!-- Valor 4: Solidaridad -->
+            <div class="dh-value-card">
+              <div class="dh-value-top">
+                <span class="dh-value-badge">Pilar 04</span>
+                <span style="font-size:1.3rem;">🌻</span>
+              </div>
+              <h4 class="dh-value-title">Solidaridad</h4>
+              <p class="dh-value-desc">
+                Caminamos hombro a hombro junto a quienes resisten o sufren abusos, convirtiendo la empatía en apoyo real y organizado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Perfil Destacado: Abg. Andrea Solarte -->
+        <div class="lawyer-profile-box" id="abogada">
+          <div class="lawyer-avatar-container">
+            <div class="lawyer-avatar-inner">
+              <span style="font-size:3.5rem;">🌻</span>
+              <span style="font-size:0.75rem; font-weight:800; color:var(--fuchsia-deep); margin-top:0.3rem;">ABG. SOLARTE</span>
+            </div>
+          </div>
+          <div class="lawyer-credentials">
+            <div style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--sunflower-amber); font-weight:800; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em;">
+              <span>Directora & Fundadora de «Tus Derechos Valen»</span>
+            </div>
+            <h3 style="color:var(--fuchsia-deep); font-size:1.8rem; margin:0.2rem 0;">Abg. Andrea Solarte</h3>
+            <p style="color:var(--text-muted); font-size:1.025rem; line-height:1.7;">
+              Abogada comprometida con la defensa y pedagogía de los Derechos Humanos, la equidad de género y el acompañamiento a comunidades en situación de vulnerabilidad. Creadora del proyecto <strong>Tus Derechos Valen</strong> con la convicción de que el conocimiento de la ley es la herramienta más poderosa para florecer con dignidad.
+            </p>
+            <div style="margin-top:0.75rem;">
+              <button type="button" class="dh-btn dh-btn-sunflower" style="padding:0.7rem 1.4rem; font-size:0.85rem;" onclick="openSupportModal()">
+                Contactar a la Abg. Andrea Solarte
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ARTÍCULOS CORTOS EXPLICATIVOS (~60 PALABRAS)
+         ====================================================================== -->
+    <section class="dh-section-py" id="articulos">
+      <div class="dh-container">
+        <div style="text-align:center; max-width:750px; margin:0 auto 3rem auto;">
+          <div class="dh-badge-sunflower" style="background:rgba(255,255,255,0.2); border-color:#ffffff; color:#ffffff;">
+            🌻 Formación Jurídica Ciudadana
+          </div>
+          <h2 class="text-white">Guías y Artículos de Derechos Humanos</h2>
+          <p style="color:#fce7f3;">
+            Lecturas de 1 minuto redactadas por la <strong>Abg. Andrea Solarte</strong> en lenguaje claro y accesible para toda la ciudadanía.
+          </p>
+        </div>
+
+        <div class="dh-articles-grid">
+          
+          <!-- Artículo 1 -->
+          <article class="dh-article-card">
+            <div>
+              <div class="dh-article-meta">
+                <span class="dh-article-tag">🌻 Fundamentos</span>
+                <span class="dh-article-readtime">📖 1 min de lectura</span>
+              </div>
+              <h3 class="dh-article-title">¿Qué son los Derechos Humanos?</h3>
+              <blockquote class="dh-article-body" id="artText1">
+                «Los derechos humanos son garantías esenciales que pertenecen a cada persona desde su nacimiento, sin distinción de origen, identidad o condición social. Protegen la vida, la libertad, la salud, la educación y la dignidad. No se compran ni se pierden: son universales e inalienables, y forman la base de la convivencia pacífica y el bienestar de cualquier sociedad justa.»
+              </blockquote>
+            </div>
+            <div class="dh-article-footer">
+              <span class="dh-word-pill">59 palabras</span>
+              <button type="button" class="btn-copy-article" onclick="copyArticle('artText1')">
+                📋 Copiar Texto
+              </button>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="dh-article-card">
+            <div>
+              <div class="dh-article-meta">
+                <span class="dh-article-tag" style="background:#fff1f2; color:#be123c; border-color:#fecdd3;">⚠️ Alerta Ciudadana</span>
+                <span class="dh-article-readtime">📖 1 min de lectura</span>
+              </div>
+              <h3 class="dh-article-title">Cómo identificar una violación a tus derechos</h3>
+              <blockquote class="dh-article-body" id="artText2" style="border-left-color:var(--fuchsia-base);">
+                «Una violación ocurre cuando una autoridad, institución o particular te niega el acceso a tus garantías básicas o te discrimina injustamente. Se manifiesta en actos como detenciones arbitrarias, censura, despidos ilegales, violencia institucional o falta de atención médica digna. Si sientes que vulneran tu integridad, libertad o igualdad ante la ley, estás frente a un abuso que debe denunciarse.»
+              </blockquote>
+            </div>
+            <div class="dh-article-footer">
+              <span class="dh-word-pill">59 palabras</span>
+              <button type="button" class="btn-copy-article" onclick="copyArticle('artText2')">
+                📋 Copiar Texto
+              </button>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="dh-article-card">
+            <div>
+              <div class="dh-article-meta">
+                <span class="dh-article-tag" style="background:#fefce8; color:#a16207; border-color:#fef08a;">🌻 Acción Social</span>
+                <span class="dh-article-readtime">📖 1 min de lectura</span>
+              </div>
+              <h3 class="dh-article-title">El papel de la ciudadanía en la defensa legal</h3>
+              <blockquote class="dh-article-body" id="artText3" style="border-left-color:var(--sunflower-gold);">
+                «La defensa legal no depende únicamente de tribunales y especialistas: cobra verdadera fuerza con la participación de la comunidad. Informarse, documentar hechos, apoyar a víctimas y respaldar acciones colectivas frena la impunidad. Cuando la ciudadanía vigila activamente el cumplimiento de las normas y exige justicia, las leyes dejan de ser promesas escritas y se vuelven escudos reales de protección.»
+              </blockquote>
+            </div>
+            <div class="dh-article-footer">
+              <span class="dh-word-pill">59 palabras</span>
+              <button type="button" class="btn-copy-article" onclick="copyArticle('artText3')">
+                📋 Copiar Texto
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MODAL DE CONTACTO & ASESORÍA CON LA ABG. ANDREA SOLARTE
+       ======================================================================== -->
+  <div id="supportModal" style="display:none; position:fixed; inset:0; background:rgba(74,4,34,0.75); backdrop-filter:blur(6px); z-index:200; align-items:center; justify-content:center; padding:1.5rem;" role="dialog" aria-modal="true">
+    <div style="background:#ffffff; max-width:520px; width:100%; border-radius:var(--radius-lg); padding:2.5rem; border:2px solid var(--sunflower-yellow); box-shadow:0 25px 60px rgba(0,0,0,0.5); position:relative;">
+      <button type="button" style="position:absolute; top:1.25rem; right:1.25rem; background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--fuchsia-deep);" onclick="closeSupportModal()" aria-label="Cerrar ventana">
+        &times;
+      </button>
+
+      <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.5rem;">
+        <span style="font-size:1.8rem;">🌻</span>
+        <h3 style="color:var(--fuchsia-deep); margin:0;">Tus Derechos Valen</h3>
+      </div>
+      <p style="font-size:0.95rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Escríbele directamente a la <strong>Abg. Andrea Solarte</strong>. Toda comunicación se maneja bajo estricta reserva y secreto profesional.
+      </p>
+
+      <form onsubmit="event.preventDefault(); alert('Gracias por tu mensaje. La Abg. Andrea Solarte y su equipo revisarán tu caso a la brevedad.'); closeSupportModal();">
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--fuchsia-deep); margin-bottom:0.35rem;" for="formName">Nombre o Seudónimo:</label>
+          <input type="text" id="formName" style="width:100%; padding:0.75rem; border-radius:var(--radius-sm); border:1.5px solid #fbcfe8; background:#fffdf5;" placeholder="Tu nombre o cómo prefieres que te llamemos">
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--fuchsia-deep); margin-bottom:0.35rem;" for="formContact">Correo o WhatsApp de Contacto:</label>
+          <input type="text" id="formContact" required style="width:100%; padding:0.75rem; border-radius:var(--radius-sm); border:1.5px solid #fbcfe8; background:#fffdf5;" placeholder="ejemplo@correo.com o +57 300 000 0000">
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--fuchsia-deep); margin-bottom:0.35rem;" for="formMessage">¿En qué situación legal o de derechos necesitas apoyo?:</label>
+          <textarea id="formMessage" rows="3" required style="width:100%; padding:0.75rem; border-radius:var(--radius-sm); border:1.5px solid #fbcfe8; background:#fffdf5; font-family:inherit;" placeholder="Describe brevemente los hechos..."></textarea>
+        </div>
+
+        <div style="display:flex; gap:1rem; justify-content:flex-end;">
+          <button type="button" class="dh-btn dh-btn-white" style="border:1px solid #fbcfe8; padding:0.7rem 1.25rem; font-size:0.9rem;" onclick="closeSupportModal()">Cancelar</button>
+          <button type="submit" class="dh-btn dh-btn-sunflower" style="padding:0.7rem 1.4rem; font-size:0.9rem;">Enviar Consulta Segura</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ======================================================================== -->
+  <footer class="dh-footer">
+    <div class="dh-container">
+      <div class="dh-footer-grid">
+        
+        <div>
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+            <span style="font-size:2rem;">🌻</span>
+            <span style="font-family:var(--font-heading); font-size:1.4rem; font-weight:900; color:#ffffff;">
+              Tus Derechos Valen
+            </span>
+          </div>
+          <p style="font-size:0.95rem; color:#fce7f3; max-width:380px; line-height:1.7;">
+            Plataforma ciudadana y jurídica dirigida por la <strong>Abg. Andrea Solarte</strong>. Comprometidos con una defensa activa, empática y rigurosa de los Derechos Humanos.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navegación</h4>
+          <ul class="dh-footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Misión y Visión</a></li>
+            <li><a href="#valores">Nuestros Cuatro Valores</a></li>
+            <li><a href="#articulos">Guías Ciudadanas</a></li>
+            <li><a href="#abogada">Abg. Andrea Solarte</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contacto & Orientación</h4>
+          <p style="font-size:0.9rem; color:#fce7f3; margin-bottom:0.6rem;">Orientación legal y ciudadana:</p>
+          <div style="font-family:var(--font-heading); font-weight:800; font-size:1.15rem; color:var(--sunflower-yellow);">
+            Abg. Andrea Solarte
+          </div>
+          <p style="font-size:0.85rem; color:#fbcfe8; margin-top:0.4rem;">
+            Defensa, asesoría y pedagogía en Derechos Humanos.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="dh-footer-bottom">
+        <div>
+          &copy; 2026 <strong>Tus Derechos Valen</strong> • Dirección Jurídica: <strong>Abg. Andrea Solarte</strong>.
+        </div>
+        <div>
+          <span>🌻 Floreciendo con dignidad, justicia y libertad.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Interactivo -->
+  <script src="js/derechos.js"></script>
+</body>
+</html>

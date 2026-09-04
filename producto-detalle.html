@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHITECT UI Pro Kit — Sistema de Diseño y Boilerplate Next.js | AETHER DIGITAL</title>
+  <meta name="description" content="Ahorra 320+ horas de desarrollo frontend con el sistema de diseño más sofisticado para React y Next.js 15. Incluye Figma tokens, 150+ componentes y licencia comercial.">
+
+  <!-- Estilos Maestros -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       NAVBAR (REUTILIZABLE)
+       ======================================================================== -->
+  <header class="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación Principal">
+        <a href="index.html" class="nav-brand" aria-label="AETHER Digital Inicio">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span>AETHER<span class="text-accent">.</span></span>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav-link">Tienda Virtual</a></li>
+          <li><a href="producto-detalle.html" class="nav-link active">Producto Insignia</a></li>
+          <li><a href="blog.html" class="nav-link">Artículos & Blog</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="contacto.html" class="nav-link">Soporte & FAQ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-icon" aria-label="Abrir Carrito" onclick="toggleCartDrawer(true)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge-count">1</span>
+          </button>
+
+          <button type="button" class="btn-icon mobile-toggle" id="mobileToggleBtn" aria-label="Abrir Menú Móvil">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CONTENIDO PRINCIPAL DEL DETALLE DE PRODUCTO
+       ======================================================================== -->
+  <main class="section-padding" style="padding-top: 2.5rem;">
+    <div class="container">
+      
+      <!-- Breadcrumbs de Navegación -->
+      <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="tienda.html">Tienda de Software</a>
+        <span>/</span>
+        <span style="color:var(--text-primary);">ARCHITECT UI Pro Kit</span>
+      </nav>
+
+      <!-- SECCIÓN SPLIT: SHOWCASE + PANEL DE COMPRA -->
+      <section class="product-detail-hero">
+        
+        <!-- COLUMNA IZQUIERDA: SHOWCASE DE MOCKUPS INTERACTIVO -->
+        <div class="showcase-container">
+          <div class="showcase-main-preview">
+            <div class="showcase-screen" id="mockupPreviewCanvas">
+              <!-- Vista inicial por defecto (Dashboard UI) -->
+              <div class="showcase-topbar">
+                <span class="mockup-dot" style="background:#ef4444;"></span>
+                <span class="mockup-dot" style="background:#f59e0b;"></span>
+                <span class="mockup-dot" style="background:#10b981;"></span>
+                <span style="margin-left:auto; font-family:var(--font-mono); font-size:0.65rem; color:var(--text-muted);">architect-ui.dev/dashboard</span>
+              </div>
+              <div class="showcase-workspace">
+                <div class="workspace-sidebar">
+                  <div style="height:6px; background:rgba(255,255,255,0.15); border-radius:3px; margin-bottom:4px;"></div>
+                  <div style="height:4px; width:70%; background:var(--accent-electric); border-radius:2px;"></div>
+                  <div style="height:4px; width:50%; background:rgba(255,255,255,0.08); border-radius:2px; margin-top:8px;"></div>
+                  <div style="height:4px; width:65%; background:rgba(255,255,255,0.08); border-radius:2px;"></div>
+                </div>
+                <div class="workspace-dash">
+                  <div class="dash-chart-mock">
+                    <div style="padding:10px; display:flex; justify-content:space-between; align-items:center;">
+                      <span style="font-size:0.75rem; font-weight:700; color:var(--text-primary);">Analítica en Tiempo Real</span>
+                      <span style="font-size:0.7rem; color:var(--accent-electric); font-family:var(--font-mono);">+94.8% Retorno</span>
+                    </div>
+                    <div style="position:absolute; bottom:0; left:0; width:100%; height:35px; background:linear-gradient(90deg, transparent, rgba(0,255,135,0.25)); border-top:2px solid var(--accent-electric);"></div>
+                  </div>
+                  <div class="dash-grid-cards">
+                    <div class="dash-mini-card">
+                      <div style="font-size:0.65rem; color:var(--text-muted);">Suscripciones Activas</div>
+                      <div style="font-size:0.9rem; font-weight:800; color:var(--text-primary);">$48,290</div>
+                    </div>
+                    <div class="dash-mini-card">
+                      <div style="font-size:0.65rem; color:var(--text-muted);">Conversión Checkout</div>
+                      <div style="font-size:0.9rem; font-weight:800; color:var(--accent-electric);">14.2%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pestañas Interactivas de Previsualización -->
+          <div class="showcase-thumbnails">
+            <button type="button" class="thumb-item active" onclick="switchMockupView('dashboard', this)">
+              Dashboard UI
+            </button>
+            <button type="button" class="thumb-item" onclick="switchMockupView('code', this)">
+              Código Next.js 15
+            </button>
+            <button type="button" class="thumb-item" onclick="switchMockupView('figma', this)">
+              Tokens Figma v5
+            </button>
+          </div>
+
+          <!-- Especificaciones Técnicas Rápidas -->
+          <div style="padding:1.25rem 1.5rem; background:rgba(8,9,12,0.6); border-top:1px solid var(--brand-border); display:flex; flex-wrap:wrap; gap:0.6rem;">
+            <span class="badge-pill luxury" style="font-size:0.7rem;">React 19 Ready</span>
+            <span class="badge-pill luxury" style="font-size:0.7rem;">TypeScript Strict</span>
+            <span class="badge-pill luxury" style="font-size:0.7rem;">Tailwind & CSS Vars</span>
+            <span class="badge-pill luxury" style="font-size:0.7rem;">Storybook 8</span>
+            <span class="badge-pill luxury" style="font-size:0.7rem;">WCAG AAA Accesible</span>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: INFORMACIÓN Y ACCIÓN DE COMPRA -->
+        <div class="product-sales-panel">
+          <!-- Badges de Estado y Categoría -->
+          <div class="product-badges-row">
+            <span class="badge-pill accent">Bestseller Grado Élite</span>
+            <span class="badge-pill luxury">Versión 3.4.0 Estable</span>
+            <span class="badge-pill gold">★ 4.98 (420 Reseñas)</span>
+          </div>
+
+          <h1 class="product-page-title">
+            ARCHITECT UI: Elite Design System & Next.js Kit
+          </h1>
+
+          <p class="product-page-desc">
+            La infraestructura frontend definitiva para construir plataformas SaaS y aplicaciones web de lujo. Ahorra más de <strong>320 horas de ingeniería</strong> con una librería de componentes de alta gama totalmente testeada y lista para escalar.
+          </p>
+
+          <!-- Cuadro de Precio y CTA Gigante -->
+          <div class="pricing-box-prominent">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em;">Licencia Comercial Vitalicia</span>
+              <span class="price-discount-tag">Ahorras $100 USD (40% OFF)</span>
+            </div>
+
+            <div class="price-main-display">
+              <span class="price-large">$149 <span style="font-size:1.2rem; font-weight:600; color:var(--text-secondary);">USD</span></span>
+              <span class="price-strike">$249 USD</span>
+            </div>
+
+            <div class="cta-button-container">
+              <!-- BOTÓN GIGANTE CON EL 10% DE COLOR DE ACENTO -->
+              <a href="checkout.html" class="btn-electric btn-electric-lg" style="text-align:center; font-size:1.1rem; padding:1.25rem 2rem;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Comprar Ahora • Descarga Inmediata</span>
+              </a>
+
+              <button 
+                type="button" 
+                class="btn-glass"
+                onclick="CartState.addItem({id:'prod-architect-ui', title:'ARCHITECT UI Pro Kit', price:149, category:'Design System', format:'Figma + Next.js'}); toggleCartDrawer(true);">
+                Añadir al Carrito y Continuar Explorando
+              </button>
+            </div>
+
+            <!-- Garantías y Medios de Pago Seguros -->
+            <div class="security-assurances">
+              <div class="assurance-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-electric)" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>SSL 256-Bit</span>
+              </div>
+              <div class="assurance-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-electric)" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Acceso Inmediato a GitHub</span>
+              </div>
+              <div class="assurance-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-electric)" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span>14 Días Garantía Total</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beneficios Clave / Checkmarks -->
+          <div class="deliverables-grid">
+            <div class="deliverable-item">
+              <span class="deliverable-check">✓</span>
+              <span>150+ Componentes React & Next.js 15</span>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliverable-check">✓</span>
+              <span>Archivo Maestro Figma con Auto-Layout</span>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliverable-check">✓</span>
+              <span>42 Plantillas de Páginas y Dashboards</span>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliverable-check">✓</span>
+              <span>Licencia Comercial para Proyectos Ilimitados</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           DETALLES Y ENTREGABLES ("¿QUÉ INCLUYE?")
+           ==================================================================== -->
+      <section class="section-padding" style="border-top: 1px solid var(--brand-border);">
+        <div class="section-header">
+          <span class="badge-pill luxury">Entregables Claros</span>
+          <h2>Todo lo que Recibes al Instante</h2>
+          <p>Un paquete integral para diseñadores de producto y desarrolladores frontend senior.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h4 class="feature-title">Figma UI Kit Maestro</h4>
+            <p class="feature-desc">Tokens de color tipográficos, modo claro y modo oscuro integrados, variantes dinámicas con Auto-Layout 5 y guías completas de espaciado 8pt.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h4 class="feature-title">Repositorio Privado en GitHub</h4>
+            <p class="feature-desc">Código fuente limpio en Next.js 15, soporte completo para Server Components, animaciones con Framer Motion y Tailwind CSS configurado.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h4 class="feature-title">Documentación & Storybook</h4>
+            <p class="feature-desc">Guía de instalación paso a paso, sandbox interactivo de Storybook con ejemplos de implementación y snippets de código listos para copiar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TEMARIO / MÓDULOS DE ARQUITECTURA (ACORDEÓN)
+           ==================================================================== -->
+      <section class="section-padding" style="border-top: 1px solid var(--brand-border);">
+        <div class="section-header">
+          <span class="badge-pill accent">Arquitectura Modular</span>
+          <h2>Estructura y Desglose de Componentes</h2>
+          <p>Explora cada una de las capas que componen este artefacto de ingeniería de élite.</p>
+        </div>
+
+        <div class="accordion-group">
+          <!-- Módulo 1 -->
+          <div class="accordion-item active">
+            <button type="button" class="accordion-header">
+              <span>01. Sistema de Tokens y Regla 60-30-10</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Estructura de variables CSS universales para tema oscuro de lujo: Fondo neutro (60%), Índigo de autoridad (30%) y Acento Neón Mint (10%). Compatibilidad total con exportadores automáticos de Figma a código.
+            </div>
+          </div>
+
+          <!-- Módulo 2 -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>02. Librería de 150+ Componentes Atómicos</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Botones con estados micro-animados, inputs con validación en tiempo real, modales y drawers accesibles por teclado (ARIA compliant), selects con búsqueda, tooltips, avatares y tabs interactivos.
+            </div>
+          </div>
+
+          <!-- Módulo 3 -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>03. Dashboards & Vistas Pre-construidas</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              42 pantallas completas que incluyen: Panel de Analítica SaaS con gráficos de rendimiento, Checkout de alta conversión, Flujo de Configuración de Cuenta, Historial de Facturación y Tablas de Datos con filtros y ordenamiento.
+            </div>
+          </div>
+
+          <!-- Módulo 4 -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>04. Upgrades Vitalicios y Soporte Técnico</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Cada lanzamiento de una nueva versión de Next.js o React incluye una actualización directa en el repositorio sin costo adicional. Canal privado de soporte por Discord y GitHub Issues exclusivo para clientes verificados.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TABLA COMPARATIVA DE VALOR (ROI)
+           ==================================================================== -->
+      <section class="section-padding" style="border-top: 1px solid var(--brand-border);">
+        <div class="section-header text-center">
+          <span class="badge-pill gold">Retorno de Inversión (ROI)</span>
+          <h2>AETHER vs Construir desde Cero</h2>
+          <p style="max-width: 600px; margin:0 auto;">¿Por qué reinventar la rueda cuando puedes iniciar en la línea de meta?</p>
+        </div>
+
+        <div class="comparison-container">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Criterio</th>
+                <th class="comparison-col-highlight">ARCHITECT UI (AETHER)</th>
+                <th>Desarrollar In-House</th>
+                <th>Agencia Tradicional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tiempo de Lanzamiento</strong></td>
+                <td class="comparison-col-highlight text-accent">5 Minutos (Descarga inmediata)</td>
+                <td>3 a 4 Meses</td>
+                <td>2 a 3 Meses</td>
+              </tr>
+              <tr>
+                <td><strong>Costo Total</strong></td>
+                <td class="comparison-col-highlight text-accent">$149 USD (Pago único)</td>
+                <td>$8,000 - $15,000 USD (Sueldos)</td>
+                <td>$12,000 - $25,000 USD</td>
+              </tr>
+              <tr>
+                <td><strong>Calidad de Código</strong></td>
+                <td class="comparison-col-highlight">TypeScript Strict + WCAG AAA</td>
+                <td>Inconsistente</td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td><strong>Actualizaciones</strong></td>
+                <td class="comparison-col-highlight text-accent">Vitalicias y Gratuitas</td>
+                <td>Mantenimiento propio constante</td>
+                <td>Cobro por hora adicional</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           GARANTÍA BLINDADA
+           ==================================================================== -->
+      <div class="guarantee-box">
+        <div class="guarantee-badge-icon">
+          🛡️
+        </div>
+        <div>
+          <h3 style="margin-bottom:0.5rem; color:var(--text-primary);">Garantía de Satisfacción 100% Sin Riesgo (14 Días)</h3>
+          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.6;">
+            Si tras adquirir y revisar el código de ARCHITECT UI consideras que no cumple con el estándar de sofisticación, velocidad y valor que prometemos, envíanos un correo antes de los 14 días y te devolveremos el 100% de tu dinero inmediatamente. Sin preguntas ni trabas.
+          </p>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           FAQ ESPECÍFICO DEL PRODUCTO (ACORDEÓN)
+           ==================================================================== -->
+      <section class="section-padding" style="border-top: 1px solid var(--brand-border);">
+        <div class="section-header">
+          <span class="badge-pill luxury">Dudas Frecuentes</span>
+          <h2>Preguntas Frecuentes sobre la Licencia</h2>
+        </div>
+
+        <div class="accordion-group">
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>¿Puedo usar este kit en proyectos de clientes o aplicaciones comerciales?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Sí, totalmente. La licencia comercial incluida te permite usar ARCHITECT UI en proyectos comerciales personales, SaaS de pago y trabajos para clientes sin pagar royalties adicionales. Lo único que no permitimos es la reventa directa del kit como plantilla independiente.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>¿Cómo recibo el acceso al código y a Figma tras comprar?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              El proceso está 100% automatizado. En el momento exacto en que se valida el pago con Stripe o PayPal, recibirás un enlace de descarga inmediata en pantalla y una invitación directa a tu correo para acceder al repositorio privado de GitHub y a los archivos editables en Figma.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button type="button" class="accordion-header">
+              <span>¿Qué experiencia previa necesito para aprovechar el boilerplate?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              Con conocimientos básicos a intermedios de React o HTML/CSS puedes utilizar los componentes sin problemas. Para sacar el máximo provecho de las arquitecturas serverless se recomienda familiaridad con Next.js y TypeScript, pero la documentación incluye guías paso a paso para principiantes.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       BARRA STICKY MÓVIL (COMPRA RÁPIDA EN DISPOSITIVOS PEQUEÑOS)
+       ======================================================================== -->
+  <aside class="sticky-mobile-cta" aria-label="Acción de compra rápida móvil">
+    <div>
+      <div style="font-size:0.75rem; color:var(--text-muted);">ARCHITECT UI</div>
+      <div style="font-size:1.15rem; font-weight:800; color:var(--text-primary);">$149 USD</div>
+    </div>
+    <a href="checkout.html" class="btn-electric" style="padding:0.75rem 1.25rem; font-size:0.85rem;">
+      Comprar Ahora
+    </a>
+  </aside>
+
+  <!-- ========================================================================
+       DRAWER DEL CARRITO DE COMPRAS (SLIDE-OVER INTERACTIVO)
+       ======================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop">
+    <aside class="cart-drawer" aria-label="Carrito de compras">
+      <div class="cart-header">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <h3 style="font-size:1.25rem;">Tu Orden Digital</h3>
+          <span class="badge-pill luxury" style="padding:2px 8px; font-size:0.7rem;">SSL 256-Bit</span>
+        </div>
+        <button type="button" class="btn-icon" aria-label="Cerrar carrito" onclick="toggleCartDrawer(false)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="6"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Renderizado dinámicamente por JavaScript -->
+      </div>
+
+      <div id="cartEmptyNotice" style="display:none; padding:3rem 1.5rem; text-align:center; color:var(--text-muted);">
+        <p>Tu carrito está vacío actualmente.</p>
+        <a href="tienda.html" class="btn-outline-subtle" style="margin-top:1rem; display:inline-flex;" onclick="toggleCartDrawer(false)">
+          Explorar Productos
+        </a>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$149 USD</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Licencia Comercial</span>
+          <span style="color:var(--accent-electric);">Incluida (Gratis)</span>
+        </div>
+        <div class="cart-summary-total">
+          <span>Total a Pagar</span>
+          <span id="cartTotal" style="color:var(--accent-electric);">$149 USD</span>
+        </div>
+        <a href="checkout.html" class="btn-electric" style="width:100%; text-align:center;">
+          Proceder al Pago Seguro
+        </a>
+        <div style="display:flex; justify-content:center; gap:1rem; margin-top:1rem; opacity:0.6; font-size:0.75rem;">
+          <span>🔒 Pago Cifrado</span>
+          <span>⚡ Entrega Instantánea</span>
+          <span>💳 Tarjeta & PayPal</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER (REUTILIZABLE)
+       ======================================================================== -->
+  <footer class="footer-wrapper">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span>AETHER<span class="text-accent">.</span></span>
+          </a>
+          <p class="footer-brand-bio">
+            La plataforma boutique para creadores digitales y equipos de software de élite. Construimos herramientas digitales que marcan la pauta en la industria.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Ecosistema</h4>
+          <ul class="footer-links">
+            <li><a href="tienda.html" class="footer-link">Todos los Productos</a></li>
+            <li><a href="producto-detalle.html" class="footer-link">Sistemas de Diseño</a></li>
+            <li><a href="tienda.html?cat=software" class="footer-link">Software & Scripts</a></li>
+            <li><a href="tienda.html?cat=courses" class="footer-link">Cursos de Maestría</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Compañía</h4>
+          <ul class="footer-links">
+            <li><a href="sobre-nosotros.html" class="footer-link">Nuestra Filosofía</a></li>
+            <li><a href="blog.html" class="footer-link">Blog & Manifiesto</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto & Soporte</a></li>
+            <li><a href="contacto.html#faq" class="footer-link">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Club Privado AETHER</h4>
+          <p style="font-size:0.875rem; color:var(--text-secondary);">
+            Recibe análisis de arquitectura de código, lanzamientos beta exclusivos y descuentos reservados para miembros.
+          </p>
+          <form class="footer-newsletter-box" onsubmit="event.preventDefault(); showToast('¡Bienvenido al Club!', 'Te hemos enviado un enlace de confirmación.');">
+            <input type="email" class="footer-input" placeholder="tu@empresa.com" required aria-label="Correo electrónico">
+            <button type="submit" class="btn-electric" style="padding:0.6rem 1rem; font-size:0.8rem;">
+              Unirse
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 AETHER DIGITAL Inc. Todos los derechos reservados.
+        </div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" class="footer-link">Términos de Servicio</a>
+          <a href="#" class="footer-link">Política de Privacidad</a>
+          <a href="#" class="footer-link">Licencias de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
